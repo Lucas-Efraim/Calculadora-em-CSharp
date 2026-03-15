@@ -21,7 +21,7 @@ Console.WriteLine("[2] Subtração");
 Console.WriteLine("[3] Multiplicação");
 Console.WriteLine("[4] Divisão");
 Console.WriteLine("Escolha o valor correspondente a operação");
-Double operation = Double.Parse(Console.ReadLine());
+int operation = int.Parse(Console.ReadLine());
 
 Console.WriteLine();
 Console.WriteLine();
