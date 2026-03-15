@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lucas\\Documents\\Estudo Programação\\Estudo Git e Github\\Meus Projetos\\Calculadora em C#\\CalculadoraSimples.csproj",
+      "projectUniqueName": "C:\\Users\\lucas\\Documents\\Estudo-Programação\\Git-Github\\Meus-Projetos\\Calculadora-CSharp\\Calculadora\\CalculadoraSimples.csproj",
       "projectName": "CalculadoraSimples",
-      "projectPath": "C:\\Users\\lucas\\Documents\\Estudo Programação\\Estudo Git e Github\\Meus Projetos\\Calculadora em C#\\CalculadoraSimples.csproj",
+      "projectPath": "C:\\Users\\lucas\\Documents\\Estudo-Programação\\Git-Github\\Meus-Projetos\\Calculadora-CSharp\\Calculadora\\CalculadoraSimples.csproj",
       "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lucas\\Documents\\Estudo Programação\\Estudo Git e Github\\Meus Projetos\\Calculadora em C#\\obj\\",
+      "outputPath": "C:\\Users\\lucas\\Documents\\Estudo-Programação\\Git-Github\\Meus-Projetos\\Calculadora-CSharp\\Calculadora\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config"
