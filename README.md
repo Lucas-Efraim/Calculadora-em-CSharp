@@ -19,7 +19,14 @@ As tecnologias que eu estou usando para desenvolver a calculadora são:
 - Framework: .NET.
 
 
+## Imagens do projeto
+
+![Multiplicação](Imagens/Multiplicação.png) ![Divisão por 0](Imagens/Divisão-por-0.png)
+
+
 ## Planos para a próxima versão
 
 Na próxima versão eu vou estudar como implementar um loop para o usuário continuar usando a calculadora até ele decidir fechar o programa, em vez do programa terminar a cada cálculo realizado.
-Também quero aprender a como evitar do programa crashar se o usuário digitar letras em vez de números.
+Também quero aprender a como evitar do programa crashar se o usuário digitar letras em vez de números:
+
+![Crash](Imagens/Crash.png)

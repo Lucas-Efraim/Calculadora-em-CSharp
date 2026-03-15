@@ -27,3 +27,18 @@ C:\Users\lucas\Documents\Estudo Programação\Estudo Git e Github\Meus Projetos\
 C:\Users\lucas\Documents\Estudo Programação\Estudo Git e Github\Meus Projetos\Calculadora em C#\obj\Debug\net10.0\CalculadoraSimples.pdb
 C:\Users\lucas\Documents\Estudo Programação\Estudo Git e Github\Meus Projetos\Calculadora em C#\obj\Debug\net10.0\CalculadoraSimples.genruntimeconfig.cache
 C:\Users\lucas\Documents\Estudo Programação\Estudo Git e Github\Meus Projetos\Calculadora em C#\obj\Debug\net10.0\ref\CalculadoraSimples.dll
+C:\Users\lucas\Documents\Estudo-Programação\Git-Github\Meus-Projetos\Calculadora-CSharp\Calculadora\bin\Debug\net10.0\CalculadoraSimples.exe
+C:\Users\lucas\Documents\Estudo-Programação\Git-Github\Meus-Projetos\Calculadora-CSharp\Calculadora\bin\Debug\net10.0\CalculadoraSimples.deps.json
+C:\Users\lucas\Documents\Estudo-Programação\Git-Github\Meus-Projetos\Calculadora-CSharp\Calculadora\bin\Debug\net10.0\CalculadoraSimples.runtimeconfig.json
+C:\Users\lucas\Documents\Estudo-Programação\Git-Github\Meus-Projetos\Calculadora-CSharp\Calculadora\bin\Debug\net10.0\CalculadoraSimples.dll
+C:\Users\lucas\Documents\Estudo-Programação\Git-Github\Meus-Projetos\Calculadora-CSharp\Calculadora\bin\Debug\net10.0\CalculadoraSimples.pdb
+C:\Users\lucas\Documents\Estudo-Programação\Git-Github\Meus-Projetos\Calculadora-CSharp\Calculadora\obj\Debug\net10.0\CalculadoraSimples.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas\Documents\Estudo-Programação\Git-Github\Meus-Projetos\Calculadora-CSharp\Calculadora\obj\Debug\net10.0\CalculadoraSimples.AssemblyInfoInputs.cache
+C:\Users\lucas\Documents\Estudo-Programação\Git-Github\Meus-Projetos\Calculadora-CSharp\Calculadora\obj\Debug\net10.0\CalculadoraSimples.AssemblyInfo.cs
+C:\Users\lucas\Documents\Estudo-Programação\Git-Github\Meus-Projetos\Calculadora-CSharp\Calculadora\obj\Debug\net10.0\CalculadoraSimples.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Documents\Estudo-Programação\Git-Github\Meus-Projetos\Calculadora-CSharp\Calculadora\obj\Debug\net10.0\CalculadoraSimples.sourcelink.json
+C:\Users\lucas\Documents\Estudo-Programação\Git-Github\Meus-Projetos\Calculadora-CSharp\Calculadora\obj\Debug\net10.0\CalculadoraSimples.dll
+C:\Users\lucas\Documents\Estudo-Programação\Git-Github\Meus-Projetos\Calculadora-CSharp\Calculadora\obj\Debug\net10.0\refint\CalculadoraSimples.dll
+C:\Users\lucas\Documents\Estudo-Programação\Git-Github\Meus-Projetos\Calculadora-CSharp\Calculadora\obj\Debug\net10.0\CalculadoraSimples.pdb
+C:\Users\lucas\Documents\Estudo-Programação\Git-Github\Meus-Projetos\Calculadora-CSharp\Calculadora\obj\Debug\net10.0\CalculadoraSimples.genruntimeconfig.cache
+C:\Users\lucas\Documents\Estudo-Programação\Git-Github\Meus-Projetos\Calculadora-CSharp\Calculadora\obj\Debug\net10.0\ref\CalculadoraSimples.dll
