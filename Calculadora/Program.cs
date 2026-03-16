@@ -9,7 +9,7 @@ public static class Program
         Console.WriteLine("-----------------------");
         Console.WriteLine("| Calculadora Simples |");
         Console.WriteLine("-----------------------");
-        Console.WriteLine("Versão 1.0");
+        Console.WriteLine("Versão 1.1");
 
         Console.WriteLine();
         Console.WriteLine();
