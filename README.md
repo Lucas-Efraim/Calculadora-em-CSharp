@@ -12,7 +12,7 @@ As tecnologias que eu estou usando para desenvolver a calculadora são:
 - Framework: .NET;
 
 
-##  Versão 1.0 - Dia 14/03/2026
+##  Versão 1.0 - Dia 15/03/2026
 
 Esta é a primeira versão da calculadora, bem simples, funcionando as quatro operações básicas (adição, subtração, multiplicação e divisão).
 - Verificação de divisão por zero está ok;
@@ -37,7 +37,7 @@ Também quero aprender a como evitar do programa crashar se o usuário digitar l
 ---
 
 
-## Versão 1.1 - Dia 15/03/2026
+## Versão 1.1 - Dia 16/03/2026
 
 ### Notas da atualização
 
