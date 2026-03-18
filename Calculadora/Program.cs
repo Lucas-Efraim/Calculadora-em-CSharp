@@ -15,21 +15,19 @@ public static class Program
         Console.WriteLine();
 
         Console.Write("Digite o primeiro número: ");
-        bool primeiroNumeroValido = double.TryParse(Console.ReadLine(), out double primeiroNumero);
-        if (!primeiroNumeroValido)
+        double primeiroNumero;
+        while (!double.TryParse(Console.ReadLine(), out primeiroNumero))
         {
-            Console.WriteLine("ERRO: Você digitou um caractere inválido!");
-            Console.WriteLine("Encerrando o programa...");
-            return;
+            Console.WriteLine("Você digitou um caractere inválido!");
+            Console.Write("Digite o primeiro número: ");
         }
 
         Console.Write("Digite o segundo número: ");
-        bool segundoNumeroValido = double.TryParse(Console.ReadLine(), out double segundoNumero);
-        if (!segundoNumeroValido)
+        double segundoNumero;
+        while (!double.TryParse(Console.ReadLine(), out segundoNumero))
         {
-            Console.WriteLine("ERRO: Você digitou um caractere inválido");
-            Console.WriteLine("Encerrando o programa...");
-            return;
+            Console.WriteLine("Você digitou um caractere inválido!");
+            Console.Write("Digite o segundo número: ");
         }
 
         Console.WriteLine();
@@ -40,12 +38,11 @@ public static class Program
         Console.WriteLine("[3] Multiplicação");
         Console.WriteLine("[4] Divisão");
         Console.Write("Escolha o valor correspondente a operação: ");
-        bool operacaoValida = int.TryParse(Console.ReadLine(), out int operacao);
-        if (!operacaoValida)
+        int operacao;
+        while (!int.TryParse(Console.ReadLine(), out operacao))
         {
-            Console.WriteLine("ERRO: Você digitou um caractere inválido!");
-            Console.WriteLine("Encerrando o programa...");
-            return;
+            Console.WriteLine("Você escolheu uma opção inválida!");
+            Console.Write("Digite o valor da operação: ");
         }
 
         Console.WriteLine();
@@ -79,7 +76,7 @@ public static class Program
                 {
                     Console.WriteLine("ERRO: Não é possível realizar divisão por 0.");
                     Console.WriteLine("Encerrando o programa...");
-                    return;
+                    break;
                 }
                 break;
 
@@ -87,5 +84,7 @@ public static class Program
                 Console.WriteLine("ERRO: Opção inválida!");
                 break;
         }
+        
     }
+
 }
