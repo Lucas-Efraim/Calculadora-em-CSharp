@@ -39,7 +39,7 @@ public static class Program
         Console.WriteLine("[4] Divisão");
         Console.Write("Escolha o valor correspondente a operação: ");
         int operacao;
-        while (!int.TryParse(Console.ReadLine(), out operacao))
+        while (!int.TryParse(Console.ReadLine(), out operacao) || (operacao < 1) || (operacao > 4))
         {
             Console.WriteLine("Você escolheu uma opção inválida!");
             Console.Write("Digite o valor da operação: ");
@@ -76,13 +76,9 @@ public static class Program
                 {
                     Console.WriteLine("ERRO: Não é possível realizar divisão por 0.");
                     Console.WriteLine("Encerrando o programa...");
-                    break;
                 }
                 break;
 
-            default:
-                Console.WriteLine("ERRO: Opção inválida!");
-                break;
         }
         
     }
