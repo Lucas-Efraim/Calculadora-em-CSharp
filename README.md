@@ -96,6 +96,8 @@ Foram realizadas ainda algumas melhorias na experiência do usuário (UX), como:
     - **ESC** para sair.
 - Melhorias de UX/UI para tornar o uso mais claro e organizado;
 
+Exemplo de execução com tratamento de erros:
+
 ![Controle de fluxo](Imagens/Continuar-Encerrar.png)
 
 
