@@ -12,6 +12,13 @@ As tecnologias que eu estou usando para desenvolver a calculadora são:
 - Framework: .NET;
 
 
+## Como executar
+
+- Clone este repositório: `git clone https://github.com/Lucas-Efraim/Calculadora-em-CSharp`
+- Acesse a pasta do projeto: `cd Calculadora-em-CSharp`
+- Execute o projeto: `dotnet run`
+
+
 ##  Versão 1.0 - Dia 15/03/2026
 
 Esta é a primeira versão da calculadora, bem simples, funcionando as quatro operações básicas (adição, subtração, multiplicação e divisão).
@@ -33,7 +40,6 @@ Também quero aprender a como evitar do programa crashar se o usuário digitar l
 
 
 ---  
----
 ---
 
 
@@ -61,3 +67,40 @@ Também quero aprender a como evitar do programa crashar se o usuário digitar l
 
 Ainda estou estudando sobre a implementação do loop, então irei adicionar na próxima versão.  
 Também irei adicionar um loop na situação onde caso o usuário digite uma letra, o programa avisa o erro e solicita a entrada novamente em vez de fechar.
+
+
+---
+---
+
+
+## Versão 1.2 - Dia 19/03/2026
+
+Esta é a versão mais complexa até o momento. Levei cerca de 3 dias estudando para compreender melhor os conceitos de `while` e conseguir aplicá-lo corretamente no loop principal do programa.
+
+Além disso, também estudei o funcionamento de `ConsoleKeyInfo` e seus atributos, utilizando essa estrutura em conjunto com o `while` para controlar o fluxo do programa. Agora o usuário pode decidir se deseja continuar usando a calculadora pressionando **ENTER** ou encerrar o programa pressionando **ESC**.
+
+Também alterei o comportamento da divisão por zero: anteriormente o programa era encerrado, e agora apenas exibe a mensagem de erro e segue normalmente para a opção de continuar ou sair.
+
+Foram realizadas ainda algumas melhorias na experiência do usuário (UX), como:
+- Adição de espaçamentos para melhor leitura;
+- Padronização da exibição dos resultados;
+- Limpeza da tela ao reiniciar o programa utilizando `Console.Clear()`;
+
+
+### Notas da atualização
+
+- Implementação de loop com `while` para manter o programa em execução contínua;
+- Validação da operação escolhida, garantindo entrada apenas entre 1 e 4;
+- Controle de fluxo com teclado (`ConsoleKeyInfo` + `while`), permitindo:
+    - **ENTER** para continuar.
+    - **ESC** para sair.
+- Melhorias de UX/UI para tornar o uso mais claro e organizado;
+
+![Controle de fluxo](Imagens/Continuar-Encerrar.png)
+
+
+### Planos para a próxima versão
+
+- Usar métodos para separar algumas partes que estão repetitivas;
+- Melhorar a organização e legibilidade do código;
+- Continuar aprimorando a experiência do usuário (UX/UI);
