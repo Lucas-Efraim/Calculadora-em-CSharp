@@ -70,24 +70,17 @@ public static class Program
                         break;
 
                     case 4:
-                        if (segundoNumero != 0)
-                        {
-                            resultado = Dividir(primeiroNumero , segundoNumero);
-                        }
-                        else
-                        {
-                            resultado = null;
-                        }
+                        resultado = Dividir(primeiroNumero , segundoNumero);
                         break;
                 }
             
             if (resultado.HasValue)
             {
-                Console.WriteLine($"RESULTADO: {resultado.Value:0.##}");
+                Console.WriteLine($"RESULTADO: {resultado.Value}");
             }
             else
             {
-                Console.WriteLine("ERRO: Não é possível realizar divisão por 0");
+                Console.WriteLine("ERRO: Não é possível realizar divisão por 0!");
             }
 
             Console.WriteLine();
@@ -133,9 +126,17 @@ public static class Program
         return resultado;
     }
 
-    private static double Dividir(double primeiroNumero , double segundoNumero)
+    private static double? Dividir(double primeiroNumero , double segundoNumero)
     {
-        double resultado = primeiroNumero / segundoNumero;
+        double? resultado;
+        if (segundoNumero == 0)
+        {
+            resultado = null;
+        }
+        else
+        {
+            resultado = primeiroNumero / segundoNumero;
+        }
         return resultado;
     }
 }
