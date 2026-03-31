@@ -53,36 +53,14 @@ public static class Program
 
             Console.WriteLine();
 
-            switch (operacao)
+            if ((operacao == 4) && (segundoNumero == 0))
             {
-                case 1:
-                    double resultadoAdicao = primeiroNumero + segundoNumero;
-                    Console.WriteLine($"RESULTADO: {resultadoAdicao}");
-                    break;
-
-                case 2:
-                    double resultadoSubtracao = primeiroNumero - segundoNumero;
-                    Console.WriteLine($"RESULTADO: {resultadoSubtracao}");
-                    break;
-
-                case 3:
-                    double resultadoMultiplicacao = primeiroNumero * segundoNumero;
-                    Console.WriteLine($"RESULTADO: {resultadoMultiplicacao}");
-                    break;
-
-                case 4:
-                    if (segundoNumero != 0)
-                    {
-                        double resultadoDivisao = primeiroNumero / segundoNumero;
-                        Console.WriteLine($"RESULTADO: {resultadoDivisao}");
-                    }
-
-                    else
-                    {
-                        Console.WriteLine("ERRO: Não é possível realizar divisão por 0.");
-                    }
-                    break;
-
+                Console.WriteLine("ERRO: Não é possível realizar divisão por 0");
+            }
+            else
+            {
+                double resultado = Calculo(operacao , primeiroNumero , segundoNumero);
+                Console.WriteLine($"RESULTADO: {resultado:F2}");
             }
 
             Console.WriteLine();
@@ -108,5 +86,34 @@ public static class Program
                 escEnter = false;
             }
         }
+    }
+
+    public static double Calculo(int operacao , double primeiroNumero , double segundoNumero)
+    {
+        double resultado;
+        switch (operacao)
+        {
+            case 1:
+                resultado = primeiroNumero + segundoNumero;
+                break;
+            
+            case 2:
+                resultado = primeiroNumero - segundoNumero;
+                break;
+            
+            case 3:
+                resultado = primeiroNumero * segundoNumero;
+                break;
+            
+            case 4:
+                resultado = primeiroNumero / segundoNumero;
+                break;
+
+            default:
+                resultado = 0;
+                break;
+        }
+
+        return resultado;
     }
 }
