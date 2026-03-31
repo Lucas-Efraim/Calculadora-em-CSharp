@@ -53,14 +53,41 @@ public static class Program
 
             Console.WriteLine();
 
-            if ((operacao == 4) && (segundoNumero == 0))
+            double? resultado = null;
+
+                switch (operacao)
+                {
+                    case 1:
+                        resultado = Somar(primeiroNumero , segundoNumero);
+                        break;
+
+                    case 2:
+                        resultado = Diminuir(primeiroNumero , segundoNumero);
+                        break;
+
+                    case 3:
+                        resultado = Multiplicar(primeiroNumero , segundoNumero);
+                        break;
+
+                    case 4:
+                        if (segundoNumero != 0)
+                        {
+                            resultado = Dividir(primeiroNumero , segundoNumero);
+                        }
+                        else
+                        {
+                            resultado = null;
+                        }
+                        break;
+                }
+            
+            if (resultado.HasValue)
             {
-                Console.WriteLine("ERRO: Não é possível realizar divisão por 0");
+                Console.WriteLine($"RESULTADO: {resultado.Value:0.##}");
             }
             else
             {
-                double resultado = Calculo(operacao , primeiroNumero , segundoNumero);
-                Console.WriteLine($"RESULTADO: {resultado:F2}");
+                Console.WriteLine("ERRO: Não é possível realizar divisão por 0");
             }
 
             Console.WriteLine();
@@ -88,32 +115,27 @@ public static class Program
         }
     }
 
-    public static double Calculo(int operacao , double primeiroNumero , double segundoNumero)
+    private static double Somar(double primeiroNumero , double segundoNumero)
     {
-        double resultado;
-        switch (operacao)
-        {
-            case 1:
-                resultado = primeiroNumero + segundoNumero;
-                break;
-            
-            case 2:
-                resultado = primeiroNumero - segundoNumero;
-                break;
-            
-            case 3:
-                resultado = primeiroNumero * segundoNumero;
-                break;
-            
-            case 4:
-                resultado = primeiroNumero / segundoNumero;
-                break;
+        double resultado = primeiroNumero + segundoNumero;
+        return resultado;
+    }
 
-            default:
-                resultado = 0;
-                break;
-        }
+    private static double Diminuir(double primeiroNumero , double segundoNumero)
+    {
+        double resultado = primeiroNumero - segundoNumero;
+        return resultado;
+    }
 
+    private static double Multiplicar(double primeiroNumero , double segundoNumero)
+    {
+        double resultado = primeiroNumero * segundoNumero;
+        return resultado;
+    }
+
+    private static double Dividir(double primeiroNumero , double segundoNumero)
+    {
+        double resultado = primeiroNumero / segundoNumero;
         return resultado;
     }
 }
