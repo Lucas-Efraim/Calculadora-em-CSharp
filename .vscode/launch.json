@@ -1,11 +1,13 @@
 {
-    // Use o IntelliSense para saber mais sobre os atributos possíveis.
-    // Focalizar para exibir as descrições dos atributos existentes.
-    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations":
-    [
+  "version": "0.2.0",
+  "configurations": [
     
-        "console": "integratedTerminal"
-    ]
+    {
+      "name": "Executar Calculadora",
+      "type": "coreclr",
+      "request": "launch",
+      "program": "${workspaceFolder}/Calculadora/bin/Debug/net10.0/CalculadoraSimples.dll",
+      "console": "externalTerminal"
+    }
+  ]
 }
