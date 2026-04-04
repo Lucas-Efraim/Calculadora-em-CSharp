@@ -8,19 +8,19 @@
     "net10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\lucas\\.nuget\\packages\\": {}
+    "C:\\Users\\Lucas\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\lucas\\Documents\\Estudo-Programação\\Git-Github\\Meus-Projetos\\Calculadora-CSharp\\Calculadora\\CalculadoraSimples.csproj",
+      "projectUniqueName": "C:\\Users\\Lucas\\Documents\\GitHub\\Calculadora-em-CSharp\\Calculadora\\CalculadoraSimples.csproj",
       "projectName": "CalculadoraSimples",
-      "projectPath": "c:\\Users\\lucas\\Documents\\Estudo-Programação\\Git-Github\\Meus-Projetos\\Calculadora-CSharp\\Calculadora\\CalculadoraSimples.csproj",
-      "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\lucas\\Documents\\Estudo-Programação\\Git-Github\\Meus-Projetos\\Calculadora-CSharp\\Calculadora\\obj\\",
+      "projectPath": "C:\\Users\\Lucas\\Documents\\GitHub\\Calculadora-em-CSharp\\Calculadora\\CalculadoraSimples.csproj",
+      "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Lucas\\Documents\\GitHub\\Calculadora-em-CSharp\\Calculadora\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
@@ -44,7 +44,7 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.100"
+      "SdkAnalysisLevel": "10.0.200"
     },
     "frameworks": {
       "net10.0": {
@@ -65,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
