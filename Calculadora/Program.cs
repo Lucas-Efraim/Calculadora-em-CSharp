@@ -13,16 +13,16 @@ public static class Program
             Console.WriteLine("=====================");
             Console.WriteLine("| Calculadora em C# |");
             Console.WriteLine("=====================");
-            Console.WriteLine("Versão 1.2");
+            Console.WriteLine("Versão 1.3");
             Console.ResetColor();
 
             LinhaDivisoria();
 
             Console.Write("Digite o primeiro número: ");
-            double primeiroNumero = LerNumero();
+            double primeiroNumero = LerNumero("primeiro número");
 
             Console.Write("Digite o segundo número: ");
-            double segundoNumero = LerNumero();
+            double segundoNumero = LerNumero("segundo número");
 
             Console.WriteLine();
 
@@ -34,20 +34,16 @@ public static class Program
             Console.Write("Escolha o valor correspondente a operação: ");
 
             int operacao = LerOperacao();
-            Console.ForegroundColor = ConsoleColor.Yellow;
             MostrarOperacao(operacao);
-            Console.ResetColor();
 
             double? resultado = CalcularResultado(operacao, primeiroNumero, segundoNumero);
             if (resultado.HasValue)
             {
-                Console.ForegroundColor = ConsoleColor.Green;
                 MostrarResultado(operacao, primeiroNumero, segundoNumero, resultado.Value);
-                Console.ResetColor();
             }
             else
             {
-                Console.ForegroundColor = ConsoleColor.Red;
+                Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine("[ERRO] Divisão por 0 não é permitida!");
                 Console.ResetColor();
             }
@@ -83,15 +79,15 @@ public static class Program
     {
         Console.WriteLine("\n-------------------------------------------------\n");
     }
-    private static double LerNumero()
+    private static double LerNumero(string contexto)
     {
         double numeroValido;
         while (!double.TryParse(Console.ReadLine(), out numeroValido))
         {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("\n[ERRO] Você digitou um caractere inválido!");
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine($"\n[ERRO] Você digitou um caractere inválido!");
             Console.ResetColor();
-            Console.Write("Digite o número novamente: ");
+            Console.Write($"Digite o {contexto} novamente: ");
         }
         return numeroValido;
     }
@@ -100,8 +96,8 @@ public static class Program
         int operacaoValida;
         while (!int.TryParse(Console.ReadLine(), out operacaoValida) || (operacaoValida < 1) || (operacaoValida > 4))
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("\n[ERRO] Você escolheu uma opção inválida!");
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine("\n[ERRO] Você digitou uma opção inválida!");
                 Console.ResetColor();
                 Console.Write("Digite o valor da operação novamente: ");
             }
@@ -109,21 +105,23 @@ public static class Program
     }
     private static void MostrarOperacao (int operacao)
     {
+        Console.ForegroundColor = ConsoleColor.DarkYellow;
         switch (operacao)
         {
             case 1:
-                Console.WriteLine("\n[INFO] Operação escolhida: Adição");
+                Console.WriteLine("\n[INFO] Operação escolhida: Adição\n");
                 break;
             case 2:
-                Console.WriteLine("\n[INFO] Operação escolhida: Subtração");
+                Console.WriteLine("\n[INFO] Operação escolhida: Subtração\n");
                 break;
             case 3:
-                Console.WriteLine("\n[INFO] Operação escolhida: Multiplicação");
+                Console.WriteLine("\n[INFO] Operação escolhida: Multiplicação\n");
                 break;
             case 4:
-                Console.WriteLine("\n[INFO] Operação escolhida: Divisão");
+                Console.WriteLine("\n[INFO] Operação escolhida: Divisão\n");
                 break;
         }
+        Console.ResetColor();
     }
     private static double? CalcularResultado(int operacao, double primeiroNumero, double segundoNumero)
     {
@@ -157,6 +155,7 @@ public static class Program
     }
     private static void MostrarResultado (int operacao, double primeiroNumero, double segundoNumero, double resultado)
     {
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
         switch (operacao)
         {
             case 1:
@@ -172,5 +171,6 @@ public static class Program
                 Console.WriteLine($"[RESULTADO] {primeiroNumero} / {segundoNumero} = {resultado:0.##}");
                 break;
         }
+        Console.ResetColor();
     }
 }

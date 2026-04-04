@@ -106,3 +106,33 @@ Exemplo de execução com tratamento de erros:
 - Usar métodos para separar algumas partes que estão repetitivas;
 - Melhorar a organização e legibilidade do código;
 - Continuar aprimorando a experiência do usuário (UX/UI);
+
+
+---
+---
+
+
+## Versão 1.3 - Dia 04/04/2026
+
+Esta versão traz uma evolução significativa no projeto, pois refatorei o código a fim de implementar métodos, cada método é responsável por uma função específica, dessa maneira o código está mais limpo, organizado, fácil de adicionar funcionalidades novas e de realizar manutenções, o código está mais escalável.
+
+Também trouxe grandes melhorias para a experiência do usuário (UX), como por exemplo: cores, feedback padronizado, linhas horizontais para dividir o programa em partes e mais fluidez na execução do projeto.
+
+
+### Notas da atualização
+
+- Implementação de métodos para organizar a estrutura do código;
+- Melhoria na UX com uso de cores e mensagens padronizadas;
+- Tratamento de erros e entradas inválidas de forma consistente;
+- Linha divisória visual para organizar melhor a interface do console.
+
+
+### Exemplo de execução com melhoria de UX:
+![Versão 1.3](Imagens/Versão%201.3.png)
+
+
+### Planos para a próxima versão
+
+- Continuar melhorando a estrutura do código;
+- Continuar evoluindo a UX;
+- Aceito sugestões de novas funcionalidades interessantes.
