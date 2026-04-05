@@ -6,50 +6,14 @@ public static class Program
 {
     public static void Main()
     {
+        double? resultadoAnterior = null;
         bool escEnter = true;
         while (escEnter)
         {
-            Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.WriteLine("=====================");
-            Console.WriteLine("| Calculadora em C# |");
-            Console.WriteLine("=====================");
-            Console.WriteLine("Versão 1.3");
-            Console.ResetColor();
-
-            LinhaDivisoria();
-
-            Console.Write("Digite o primeiro número: ");
-            double primeiroNumero = LerNumero("primeiro número");
-
-            Console.Write("Digite o segundo número: ");
-            double segundoNumero = LerNumero("segundo número");
-
-            Console.WriteLine();
-
-            Console.WriteLine("Qual operação você precisa realizar?");
-            Console.WriteLine("[1] Adição");
-            Console.WriteLine("[2] Subtração");
-            Console.WriteLine("[3] Multiplicação");
-            Console.WriteLine("[4] Divisão");
-            Console.Write("Escolha o valor correspondente a operação: ");
-
-            int operacao = LerOperacao();
-            MostrarOperacao(operacao);
-
-            double? resultado = CalcularResultado(operacao, primeiroNumero, segundoNumero);
-            if (resultado.HasValue)
-            {
-                MostrarResultado(operacao, primeiroNumero, segundoNumero, resultado.Value);
-            }
+            if(resultadoAnterior.HasValue)
+            {ComResultadoAnterior (resultadoAnterior);}
             else
-            {
-                MostrarErro("Divisão por 0 não é permitida!");
-            }
-
-            LinhaDivisoria();
-
-            Console.WriteLine("Você deseja continuar ou encerrar programa?");
-            Console.WriteLine("Pressione ENTER para continuar ou ESC para sair.");
+            {SemResultadoAnterior(resultadoAnterior);}
 
             ConsoleKeyInfo tecla = Console.ReadKey(true);
 
@@ -174,5 +138,95 @@ public static class Program
         Console.ForegroundColor = ConsoleColor.DarkYellow;
         Console.WriteLine($"\n[INFO] {mensagem}\n");
         Console.ResetColor();
+    }
+    private static void SemResultadoAnterior (double? resultadoAnterior)
+    {
+        Console.ForegroundColor = ConsoleColor.DarkCyan;
+        Console.WriteLine("=====================");
+        Console.WriteLine("| Calculadora em C# |");
+        Console.WriteLine("=====================");
+        Console.WriteLine("Versão 1.3");
+        Console.ResetColor();
+
+        LinhaDivisoria();
+
+        Console.Write("Digite o primeiro número: ");
+        double primeiroNumero = LerNumero("primeiro número");
+
+        Console.Write("Digite o segundo número: ");
+        double segundoNumero = LerNumero("segundo número");
+
+        Console.WriteLine();
+
+        Console.WriteLine("Qual operação você precisa realizar?");
+        Console.WriteLine("[1] Adição");
+        Console.WriteLine("[2] Subtração");
+        Console.WriteLine("[3] Multiplicação");
+        Console.WriteLine("[4] Divisão");
+        Console.Write("Escolha o valor correspondente a operação: ");
+
+        int operacao = LerOperacao();
+        MostrarOperacao(operacao);
+
+        double? resultado = CalcularResultado(operacao, primeiroNumero, segundoNumero);
+        if (resultado.HasValue)
+        {
+            MostrarResultado(operacao, primeiroNumero, segundoNumero, resultado.Value);
+        }
+        else
+        {
+            MostrarErro("Divisão por 0 não é permitida!");
+        }
+
+        resultadoAnterior = resultado;
+
+        LinhaDivisoria();
+
+        Console.WriteLine("Você deseja continuar ou encerrar programa?");
+        Console.WriteLine("Pressione ENTER para continuar ou ESC para sair.");
+    }
+    private static void ComResultadoAnterior (double? resultadoAnterior)
+    {
+        Console.ForegroundColor = ConsoleColor.DarkCyan;
+        Console.WriteLine("=====================");
+        Console.WriteLine("| Calculadora em C# |");
+        Console.WriteLine("=====================");
+        Console.WriteLine("Versão 1.3");
+        Console.ResetColor();
+
+        LinhaDivisoria();
+
+        Console.Write("Digite o primeiro número: ");
+        double primeiroNumero = LerNumero("primeiro número");
+
+        Console.Write("Digite o segundo número: ");
+        double segundoNumero = LerNumero("segundo número");
+
+        Console.WriteLine();
+
+        Console.WriteLine("Qual operação você precisa realizar?");
+        Console.WriteLine("[1] Adição");
+        Console.WriteLine("[2] Subtração");
+        Console.WriteLine("[3] Multiplicação");
+        Console.WriteLine("[4] Divisão");
+        Console.Write("Escolha o valor correspondente a operação: ");
+
+        int operacao = LerOperacao();
+        MostrarOperacao(operacao);
+
+        double? resultado = CalcularResultado(operacao, primeiroNumero, segundoNumero);
+        if (resultado.HasValue)
+        {
+            MostrarResultado(operacao, primeiroNumero, segundoNumero, resultado.Value);
+        }
+        else
+        {
+            MostrarErro("Divisão por 0 não é permitida!");
+        }
+
+        LinhaDivisoria();
+
+        Console.WriteLine("Você deseja continuar ou encerrar programa?");
+        Console.WriteLine("Pressione ENTER para continuar ou ESC para sair.");
     }
 }
