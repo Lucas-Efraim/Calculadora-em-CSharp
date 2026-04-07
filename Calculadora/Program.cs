@@ -7,7 +7,9 @@ public static class Program
     public static void Main()
     {
         bool continuarPrograma = true;
-        bool usarResultadoAnterior = true;
+        double? resultadoAnterior = null;
+        double primeiroNumero;
+        bool usarResultadoAnterior = false;
         while (continuarPrograma)
         {
             Console.ForegroundColor = ConsoleColor.DarkCyan;
@@ -19,8 +21,33 @@ public static class Program
 
             LinhaDivisoria();
 
-            Console.Write("Digite o primeiro número: ");
-            double primeiroNumero = LerNumero("primeiro número");
+            if (resultadoAnterior.HasValue)
+            {
+                Console.WriteLine("Você deseja usar o resultado anterior como primeiro número?");
+                Console.WriteLine("Pressione ENTER para sim e ESC para não");
+                ConsoleKeyInfo teclaUsarResultadoAnterior = Console.ReadKey(true);
+                while ((teclaUsarResultadoAnterior.Key != ConsoleKey.Enter) && (teclaUsarResultadoAnterior.Key != ConsoleKey.Escape))
+                {
+                    MostrarErro("Você pressionou uma tecla inválida!");
+                    Console.WriteLine("Pressione ENTER para usar o resultado anterior ou ESC para não usar.");
+                    teclaUsarResultadoAnterior = Console.ReadKey(true);
+                }
+                if (teclaUsarResultadoAnterior.Key == ConsoleKey.Enter)
+                {usarResultadoAnterior = true;}
+                else
+                {usarResultadoAnterior = false;}
+            }
+
+            if (usarResultadoAnterior == true)
+            {
+                primeiroNumero = resultadoAnterior.Value;
+                Console.WriteLine($"Primeiro número: {primeiroNumero}");
+            }
+            else
+            {
+                Console.WriteLine("Digite o primeiro número: ");
+                primeiroNumero = LerNumero("primeiro número");
+            }
 
             Console.Write("Digite o segundo número: ");
             double segundoNumero = LerNumero("segundo número");
@@ -47,6 +74,8 @@ public static class Program
                 MostrarErro("Divisão por 0 não é permitida!");
             }
 
+            resultadoAnterior = resultado;
+
             LinhaDivisoria();
 
             Console.WriteLine("Você deseja continuar ou encerrar programa?");
@@ -60,17 +89,12 @@ public static class Program
                 Console.WriteLine("Pressione ENTER para continuar ou ESC para sair.");
                 teclaContinuarPrograma = Console.ReadKey(true);
             }
-
             if (teclaContinuarPrograma.Key == ConsoleKey.Enter)
             {
                 continuarPrograma = true;
-                Console.WriteLine("Você deseja usar o resultado como primeiro número?");
-                Console.WriteLine("Pressione ENTER para usar ou ESC para não usar.");
             }
             else
-            {
-                continuarPrograma = false;
-            }
+            {continuarPrograma = false;}
         }
     }
     private static void LinhaDivisoria()
