@@ -9,18 +9,8 @@ public static class Program
         bool continuarPrograma = true;
         double? resultadoAnterior = null;
         double primeiroNumero;
-        bool usarResultadoAnterior = false;
         while (continuarPrograma)
         {
-            Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.WriteLine("=====================");
-            Console.WriteLine("| Calculadora em C# |");
-            Console.WriteLine("=====================");
-            Console.WriteLine("Versão 1.3");
-            Console.ResetColor();
-
-            LinhaDivisoria();
-
             if (resultadoAnterior.HasValue)
             {
                 Console.WriteLine("Você deseja usar o resultado anterior como primeiro número?");
@@ -33,18 +23,27 @@ public static class Program
                     teclaUsarResultadoAnterior = Console.ReadKey(true);
                 }
                 if (teclaUsarResultadoAnterior.Key == ConsoleKey.Enter)
-                {usarResultadoAnterior = true;}
+                {
+                    primeiroNumero = resultadoAnterior.Value;
+                    Console.Clear();
+                    Titulo();
+                    LinhaDivisoria();
+                    Console.WriteLine($"Primeiro número: {primeiroNumero}");
+                }
                 else
-                {usarResultadoAnterior = false;}
-            }
-
-            if (usarResultadoAnterior == true)
-            {
-                primeiroNumero = resultadoAnterior.Value;
-                Console.WriteLine($"Primeiro número: {primeiroNumero}");
+                {
+                    Console.Clear();
+                    Titulo();
+                    LinhaDivisoria();
+                    Console.WriteLine("Digite o primeiro número: ");
+                    primeiroNumero = LerNumero("primeiro número");
+                }
             }
             else
             {
+                Console.Clear();
+                Titulo();
+                LinhaDivisoria();
                 Console.WriteLine("Digite o primeiro número: ");
                 primeiroNumero = LerNumero("primeiro número");
             }
@@ -100,6 +99,15 @@ public static class Program
     private static void LinhaDivisoria()
     {
         Console.WriteLine("\n-------------------------------------------------\n");
+    }
+    private static void Titulo()
+    {
+        Console.ForegroundColor = ConsoleColor.DarkCyan;
+        Console.WriteLine("=====================");
+        Console.WriteLine("| Calculadora em C# |");
+        Console.WriteLine("=====================");
+        Console.WriteLine("Versão 1.3");
+        Console.ResetColor();
     }
     private static double LerNumero(string contexto)
     {
